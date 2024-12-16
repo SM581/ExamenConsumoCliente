@@ -11,9 +11,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONArray;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView txtMensaje;
+    private JSONArray respuesta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Llamar a la función que realiza la solicitud HTTP
-                new HttpRequestTask().execute("http://10.10.19.191:3000/gomez");
+                new HttpRequestTask().execute("http://10.10.19.191:3001/nombre");
             }
         });
     }
